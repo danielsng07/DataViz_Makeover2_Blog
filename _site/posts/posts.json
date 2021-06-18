@@ -1,0 +1,19 @@
+[
+  {
+    "path": "posts/welcome/",
+    "title": "Welcome to DataViz Makeover2 Blog",
+    "description": "Welcome to our new blog, DataViz Makeover2 Blog. We hope you enjoy \nreading what we have to say!",
+    "author": [
+      {
+        "name": "Sng Kah Leong",
+        "url": "https://github.com/danielsng07"
+      }
+    ],
+    "date": "2021-06-18",
+    "categories": [],
+    "contents": "\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2021-06-18T19:17:18+08:00",
+    "input_file": {}
+  }
+]
