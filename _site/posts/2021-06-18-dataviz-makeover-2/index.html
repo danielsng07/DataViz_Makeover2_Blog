@@ -117,7 +117,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["dataviz-makeover-2_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-2_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-2_files/distill-2.2.21/template.v2.js","dataviz-makeover-2_files/header-attrs-2.7/header-attrs.js","dataviz-makeover-2_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-2_files/popper-2.6.0/popper.min.js","dataviz-makeover-2_files/tippy-6.2.7/tippy-bundle.umd.min.js","dataviz-makeover-2_files/tippy-6.2.7/tippy-light-border.css","dataviz-makeover-2_files/tippy-6.2.7/tippy.css","dataviz-makeover-2_files/tippy-6.2.7/tippy.umd.min.js","dataviz-makeover-2_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["dataviz-makeover-2_files/anchor-4.2.2/anchor.min.js","dataviz-makeover-2_files/bowser-1.9.3/bowser.min.js","dataviz-makeover-2_files/distill-2.2.21/template.v2.js","dataviz-makeover-2_files/header-attrs-2.7/header-attrs.js","dataviz-makeover-2_files/jquery-1.11.3/jquery.min.js","dataviz-makeover-2_files/popper-2.6.0/popper.min.js","dataviz-makeover-2_files/tippy-6.2.7/tippy-bundle.umd.min.js","dataviz-makeover-2_files/tippy-6.2.7/tippy-light-border.css","dataviz-makeover-2_files/tippy-6.2.7/tippy.css","dataviz-makeover-2_files/tippy-6.2.7/tippy.umd.min.js","dataviz-makeover-2_files/webcomponents-2.0.0/webcomponents.js","img/Fig 1 Original Visualisation.jpg","img/Fig 10.png","img/Fig 11.png","img/Fig 12.png","img/Fig 13.png","img/Fig 14.png","img/Fig 15.png","img/Fig 16.png","img/Fig 17.png","img/Fig 18.png","img/Fig 19.png","img/Fig 2 proposed design.png","img/Fig 20.png","img/Fig 21.png","img/Fig 22.png","img/Fig 23.png","img/Fig 24.png","img/Fig 25.png","img/Fig 26.png","img/Fig 27.png","img/Fig 28.png","img/Fig 29.png","img/Fig 3 Revamp Visualisation.png","img/Fig 30.png","img/Fig 31.png","img/Fig 32.png","img/Fig 33.png","img/Fig 34.png","img/Fig 35.png","img/Fig 36.png","img/Fig 37.png","img/Fig 38.png","img/Fig 39.png","img/Fig 3a Revamp Visualisation.png","img/Fig 40.png","img/Fig 41.png","img/Fig 42.png","img/Fig 43.png","img/Fig 44.png","img/Fig 45.png","img/Fig 46.png","img/Fig 47.png","img/Fig 48.png","img/Fig 4a Data Preparation.png","img/Fig 4b Data Preparation.png","img/Fig 4c Data Preparation.png","img/Fig 4d Data Preparation.png","img/Fig 4e Data Preparation.png","img/Fig 4f Data Preparation.png","img/Fig 4g Data Preparation.png","img/Fig 4h Data Preparation.png","img/Fig 4i Data Preparation.png","img/Fig 4j Data Preparation.png","img/Fig 4k Data Preparation.png","img/Fig 4l Data Preparation.png","img/Fig 4m Data Preparation.png","img/Fig 4n Data Preparation.png","img/Fig 4o Data Preparation.png","img/Fig 4p Data Preparation.png","img/Fig 5.png","img/Fig 6.png","img/Fig 7.png","img/Fig 8.png","img/Fig 9.png"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
 <meta name="distill:offset" content="../.."/>
@@ -2098,8 +2098,363 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <div class="d-article">
-<p>Distill is a publication format for scientific and technical writing, native to the web.</p>
-<p>Learn more about using Distill at <a href="https://rstudio.github.io/distill" class="uri">https://rstudio.github.io/distill</a>.</p>
+<h1 id="critique-of-visualisation">1.0 Critique of Visualisation</h1>
+<p>The original visualisation can be seen below.</p>
+<p><img src="img/Fig%201%20Original%20Visualisation.jpg" /></p>
+<p>The data visualisation above is created by using data provided by Department of Statistics, Singapore (DOS). The data are available under <a href="https://www.singstat.gov.sg/find-data/search-by-theme/trade-and-investment/merchandise-trade/latest-data">the sub-section of Merchandise Trade by Region/Market.</a></p>
+<h3 id="clarity">1.1 Clarity</h3>
+<table>
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>S/N</th>
+<th>Critiques</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>(a) Improper labelling and formatting of both X-Axis and Y-Axis:</strong></td>
+<td>There is no unit of measurements on both Axis. There is a lack of gridline or reference line for viewer to reference to the value on both Axis. Using Taiwan as a example, the trading value is $75.2 Bil which seems to imply that part of the value refer to the Y-Axis on the Imports value and part of the value refer to the X-Axis on the Exports value, however the view will have difficulty interpreting that as there is no proper gridline on both Axis for viewer to refer and reader will not understand the value label on both Axis.</td>
+</tr>
+<tr class="even">
+<td><strong>b) Ambiguous representation of trade value on the Trading Partner:</strong></td>
+<td>There is no breakdown on what the Trade Value mean in the chart. Viewer will have difficulty understanding what the trade value is represented for as the chart is divided on X-Axis for exports and Y-Axis for imports but there is lack of information on how the Trade Value is being derived.</td>
+</tr>
+<tr class="odd">
+<td><strong>(c) Both Axis does not start from Zero:</strong></td>
+<td>There is no indication of the value at the start of both Axis and this will result in misrepresentation of the reading of the chart. In the example of Thailand with a Trade value of $33.0 Bil and it is the range of 20-30 on the X Axis and close to 20 on the Y Axis. If both the Axis will be start from 0, will the positioning of the circle for Thailand will be different? This can result in viewer misinterpreting the result of the chart.</td>
+</tr>
+<tr class="even">
+<td><strong>(d) Ambiguous representation with small and big circle on each trading Partner:</strong></td>
+<td>The viewer will need help whether to use the white small circle or the coloured big circle to interpret the value in both Axis. Using Hong Kong as a example, the user will have to think how to interpret the value of $69.0 Bil as the big circle is between the range of 60-80 of the X Axis and is between the range of 0-20 in the Y Axis.</td>
+</tr>
+<tr class="odd">
+<td><strong>(e) Chart Title contradict the conclusion statement:</strong></td>
+<td>Using the <a href="https://www.singstat.gov.sg/modules/infographics/singapore-international-trade">link</a> provided, the title of the chart is based on <strong>Merchandise Trade Performance with Major Trading Partners, 2020</strong>. However there is no explanation provided on how it was concluded Singapore Merchandise Trade with Mainland China have higher exports than imports since 2009. Neither on how United States Merchandise imports trade have exceeds exports since 2006.</td>
+</tr>
+<tr class="even">
+<td><strong>(f) Inappropriate inclusion of EU:</strong></td>
+<td>The inclusion of EU which is a continent of countries may not be a good representation to compare with the individual country. There are major continents such as Asia and America which are not represented in the chart and this may not present a fair illustration in this chart.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="aesthetic">1.2 Aesthetic</h3>
+<table>
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>S/N</th>
+<th>Critiques</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>(a) Lack of Opacity in the circle:</strong></td>
+<td>The circles in the chart are overlapping each other. For example, United State are on top of EU and United States and it cover the small white circle which the creator of the chart are emphasizing the importance which illustrate the white circle tell whether the imports is higher than exports or vice versa.</td>
+</tr>
+<tr class="even">
+<td><strong>(b) Low Data-Ink:</strong></td>
+<td>The chart has too much distracting elements, there are unnecessary backgroung colour, there are many colours for the different trading partners. Assuming that this chart is trying to illutrate which trading partners have higher imports compared to exports or vice versa, it can be better represented with two colour tones. There are also unnecessary aesthetics distract such as flashing icons on which trading partner is the Top Net Importer/Exporter and flashing icons on both the Exports and Imports Axis.</td>
+</tr>
+<tr class="odd">
+<td><strong>(c) Size of Colour Circle:</strong></td>
+<td>The use of the size of circle is not appropriate as it is too big and it is making the chart very congested for reading and interpretation especially in the centre of the chart where most of the trading partners are displayed.</td>
+</tr>
+<tr class="even">
+<td><strong>(e) The Chart is static:</strong></td>
+<td>There is a lack of interactive feature for user to select and and explore how the conclusion is being derived as the chart only display the trade value in 2020 and there is no illustration on the period from 2006 till 2020 to explain where exports trade is higher for mainland china since 2009 and imports trade is higher for United States since 2006.</td>
+</tr>
+<tr class="odd">
+<td><strong>(f) The Axis Title should not be labeled in the body of the chart:</strong></td>
+<td>The Axis Title “Net Importers” and “Net Exporters” should not be labeled in the body of the chart and this is not appropriate as if the circle may overlap the Axis Title in some other case if other year data is choosen. It will be more approriate to label on the outer and in the middle of each Axis.</td>
+</tr>
+<tr class="even">
+<td><strong>(g) The Trade Value should not be displayed at all time :</strong></td>
+<td>A interactive Tooltip should be used instead when user hover over the circle to display the relevant information. With too many value labels appearing at one go, together with the large circle, it is very difficult for user to focus on where to look for relevant information which they need.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="proposed-design">2.0 Proposed Design</h1>
+<h3 id="the-sketch-of-proposed-design-can-be-seen-below.">2.1 The sketch of proposed design can be seen below.</h3>
+<p><img src="img/Fig%202%20proposed%20design.png" /></p>
+<h3 id="advantages-of-proposed-design">2.2 Advantages of proposed design</h3>
+<table>
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>S/N</th>
+<th>Advantages</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>(a) Interactive Feature provided:</strong></td>
+<td>User is able to select the month/year (Jan 2011 to Dec 2020) and also the number of top trading partners to visualize. This allow user to explore wide range of data on the information which they want to display.</td>
+</tr>
+<tr class="even">
+<td><strong>(b) Better insights of the data display for the user:</strong></td>
+<td>User will be able to hover onto the area of interest to get the information which they required. Static display (Rectangle) on the trade value will be removed and more information will be provided to the user to view the ranking of imports and exports as compared with other trading partners. This reduce the congestion of the display with Circle and the rectangle in original visualisation appearing together which show a lot of overlapping in the centre of the chart.</td>
+</tr>
+<tr class="odd">
+<td><strong>(c) Proper labeling and formatting of the Axis:</strong></td>
+<td>User will be able to reference to the Axis reference line in Chart 1 to view the higher or lower 50% percentile of trading partner who have higher imports/exports. Gridline will be provided to Chart 2 to better reference the value of the Axis. Axis label will be formatted to provide clarify on the measurement and also Axis Title will be provided to explain the Axis value.</td>
+</tr>
+<tr class="even">
+<td><strong>(d) Chart 2(Bar Chart) to complement Chart 1 (Scatterplot):</strong></td>
+<td>User will be able to toggle the filter and it will apply to both Charts to display the information currently. Chart 1 (scatter plot) will display on the percentile ratio of imports versus exports of the selected trading partners and Chart 2 (bar chart) will help to complement Chart 1 by displaying the Trade balance illustration.</td>
+</tr>
+<tr class="odd">
+<td><strong>(e) Interactive Chart Title:</strong></td>
+<td>Chart Title will display the number of trading partner selected and also the “month/year” based on the selection of the user.</td>
+</tr>
+<tr class="even">
+<td><strong>(f) Usage of two colours tone (Red-Blue Diverging) to illustrate Trade Balance:</strong></td>
+<td>Trade balance information will be displayed in two colour tone, Red for Trade deficit and Blue for Trade Surplus. This simpify the colour display and make it easier for user to interpret on the trade balance trend.</td>
+</tr>
+<tr class="odd">
+<td><strong>(g) Neater Scatter Plot display:</strong></td>
+<td>80% Opacity will be introduced and moderation of the circle size in scatterplot. Opacity setting help to prevent the circle from overshadowing each other and reduce of the circle size make the chart neater when more trading partners are selected.</td>
+</tr>
+<tr class="even">
+<td><strong>(h) Use of Inking:</strong></td>
+<td>Reference line is created on both Axis for Scatterplot chart and gridline are used for barchart. This help the user to reference to the Axis value easily. Background color are removed and the flashing icons are also removed to reduce unnecessary distraction for the user.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="proposed-visualisation">3.0 Proposed Visualisation</h1>
+<p>Please view the interactive visualisation on Tableau Public <a href="https://public.tableau.com/app/profile/klsng/viz/DataVizMakeover2Finalv14/InteractiveandAnimationversionofSingaporeTradeBalancePerformancewithItsTradingPartners">here</a></p>
+<p><img src="img/Fig%203%20Revamp%20Visualisation.png" /> <img src="img/Fig%203a%20Revamp%20Visualisation.png" /></p>
+<h1 id="step-by-step-on-preparation">4.0 Step-by-step on Preparation</h1>
+<h3 id="data-preparation">4.1 - Data Preparation</h3>
+<table>
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1.</strong> Download the file from <a href="https://www.singstat.gov.sg/find-data/search-by-theme/trade-and-investment/merchandise-trade/latest-data">SingStat website</a>, unzip and load the outputFile excel file into Tableau Prep Builder.Drag the ‘T1’ and ‘T2’ worksheet into main panel.</td>
+<td><img src="img/Fig%204a%20Data%20Preparation.png" /></td>
+</tr>
+<tr class="even">
+<td><strong>2.</strong> Use the Data Interpreter. Rename ‘T1’ and ‘T2’ to ‘Imports’ and ‘Exports’ respectively. Add Clean Step to both ‘Imports’ and ‘Exports’ Data Nodes</td>
+<td><img src="img/Fig%204b%20Data%20Preparation.png" /> <img src="img/Fig%204c%20Data%20Preparation.png" /></td>
+</tr>
+<tr class="odd">
+<td><strong>3.</strong> Under ‘Clean 1’ node, filter the rows under ‘Variables’ to remove non-Country and total merchandise trades. Repeat for ‘Clean 2’.</td>
+<td><img src="img/Fig%204d%20Data%20Preparation.png" /></td>
+</tr>
+<tr class="even">
+<td><strong>4.</strong> Under the ‘Clean 1’ node, clean ‘Variables’ using ‘Split Values’ with ‘(‘ as the separator. Rename column as ‘Trading Partner’. Remove ‘Variables’ column. Repeat for ‘Clean 2’.</td>
+<td><img src="img/Fig%204e%20Data%20Preparation.png" /></td>
+</tr>
+<tr class="odd">
+<td><strong>5.</strong> Add Pivot nodes after ‘Clean 1’ and ‘Clean 2’.</td>
+<td><img src="img/Fig%204f%20Data%20Preparation.png" /></td>
+</tr>
+<tr class="even">
+<td><strong>6.</strong> Under ‘Pivot 1’, select all months under ‘Fields’ to the ‘Pivoted Fields’ panel. Repeat for ‘Pivot 2’.</td>
+<td><img src="img/Fig%204g%20Data%20Preparation.png" /></td>
+</tr>
+<tr class="odd">
+<td><strong>7.</strong> Under ‘Pivot 1’, rename ‘Pivot1 Names’ to ‘Month’ and change data type to ‘Date’. Rename ‘Pivot1 Values’ to ‘Import (Thousand Dollars)’. Remove ‘Variables’. Repeat for ‘Pivot 2’ but rename ‘Pivot1 Values’ to ‘Export (Thousand Dollars)’.</td>
+<td><img src="img/Fig%204h%20Data%20Preparation.png" /></td>
+</tr>
+<tr class="even">
+<td><strong>8.</strong> Do a full join between ‘Pivot 1’ and ‘Pivot 2’ with ‘Trading Partner’ and ‘Month’ as the join clauses.</td>
+<td><img src="img/Fig%204i%20Data%20Preparation.png" /></td>
+</tr>
+<tr class="odd">
+<td><strong>9.</strong> Create a ‘Clean’ node after ‘Join 1’ to merge duplicated ‘Trading Partner’ and ‘Month’ variables. Rename the Merge Field to Trading Partner and Month respectively.</td>
+<td><img src="img/Fig%204j%20Data%20Preparation.png" /> <img src="img/Fig%204k%20Data%20Preparation.png" /> <img src="img/Fig%204l%20Data%20Preparation.png" /> <img src="img/Fig%204m%20Data%20Preparation.png" /></td>
+</tr>
+<tr class="even">
+<td><strong>10.</strong> Multiply ‘Export (Thousand Dollars)’ by 1000 and rename it as ‘Export Trade’. Repeat the same for ‘Import (Thousand Dollars)’ and rename it as ‘Import Trade’. Remove ‘Export (Thousand Dollars) and ‘Import (Thousand Dollars)’.</td>
+<td><img src="img/Fig%204n%20Data%20Preparation.png" /> <img src="img/Fig%204o%20Data%20Preparation.png" /></td>
+</tr>
+<tr class="odd">
+<td><strong>11.</strong> Create a ‘Output’ node after ‘Pivot 3’ node and save output as ‘Monthly Singapore Merchandise Trade’.</td>
+<td><img src="img/Fig%204p%20Data%20Preparation.png" /></td>
+</tr>
+</tbody>
+</table>
+<h3 id="data-visualization">4.2 - Data Visualization</h3>
+<table>
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1.</strong> Set up a connection on Tableau Desktop to the ‘Monthly Singapore Merchandise Trade’ hyper’s extract. <strong>Add filter</strong> condition to filter by Range of Dates from 1/1/2011 to 1/12/2020.</td>
+<td><img src="img/Fig%205.png" /> <img src="img/Fig%206.png" /></td>
+</tr>
+<tr class="even">
+<td><strong>2.</strong> For Chart 1, create a new worksheet and name it “Interactive Chart -Trade Balance of Trading Partners”. <strong>Create two calculated Field</strong>, namely ‘Total Trade’ and Trade Balance.</td>
+<td><img src="img/Fig%207.png" /></td>
+</tr>
+<tr class="odd">
+<td><strong>3.</strong> At the Data Source Tab, click on <strong>edit filter</strong> to add in a new filter setting to Total Trade to <strong>filter out all non-null values</strong>.</td>
+<td><img src="img/Fig%208.png" /></td>
+</tr>
+<tr class="even">
+<td><strong>4.</strong> At the worksheet ‘Interactive Chart -Trade Balance of Trading Partners”, drag ‘Export Trade’ to ‘Columns’ and ‘Import Trade’ to ‘Rows’ shelves. Next, select the drop down button at ‘SUM(Export Trade)’ to do a <strong>Quick Table Calculation</strong> and choose <strong>Percentile</strong>. Repeat this for ‘SUM(Import Trade)’. Here we want to create a scatterplot chart to compare Export Trade Vs Import Trade based on percentile.</td>
+<td><img src="img/Fig%209.png" /></td>
+</tr>
+<tr class="odd">
+<td><strong>5.</strong> Drag <strong>Trading Partner</strong> into Detail setting of the Marks card.</td>
+<td><img src="img/Fig%2010.png" /></td>
+</tr>
+<tr class="even">
+<td><strong>6.</strong> At the Columns shelve, click on the drop down button at ‘SUM(Export Trade)’ and <strong>choose Computing Using Trading Partner</strong>. Repeat this for ‘SUM(Import Trade)’.</td>
+<td><img src="img/Fig%2011.png" /></td>
+</tr>
+<tr class="odd">
+<td><strong>7.</strong> In the Marks Card, we will select the display from automatic to <strong>Circle</strong> and we will drag <strong>Total Trade</strong> into the <strong>Size</strong> setting of the Marks card. This will display the circle size of the scatterplot according to the Total Trade amount of the trading partner.</td>
+<td><img src="img/Fig%2012.png" /></td>
+</tr>
+<tr class="even">
+<td><strong>8.</strong> Drag <strong>Trade Balance</strong> into the <strong>Colour</strong> setting of the Marks card. Next choose Edit Colors at the drop down setting of ‘SUM(Balance)’, choose <strong>Red Blue Diverging colour</strong> and <strong>choose Use Full Color Range</strong>. This allow us to display the colour tone intensity from Red to Blue diverging range to show the trade balance of different trading partner.</td>
+<td><img src="img/Fig%2013.png" /></td>
+</tr>
+<tr class="odd">
+<td><strong>9.</strong> We will want to <strong>adjust the size of the circle</strong> in the Size setting of the Marks card. We will also <strong>set the opacity to 80%</strong> and the <strong>Border with a light blue color tone</strong> in the Color setting of the Marks card. These adjustments will help to make the circle display for different trading partner to be visible to one another when the circles overlap each other.</td>
+<td><img src="img/Fig%2014.png" /></td>
+</tr>
+<tr class="even">
+<td><strong>10.</strong> Next, we will create our first interactive feature of our chart by <strong>dragging Month into the Filters Pane</strong>. We will <strong>select Month/Year</strong> as the display format and we will <strong>select all the months from January 2011 to December 2020</strong>. We will click on <strong>Show Filter</strong> and do some settings to the display. We will <strong>choose Single Value (list)</strong>, follow by <strong>removing Show “All” Value</strong> and <strong>Edit Title to ‘Select Month/Year’</strong>.</td>
+<td><img src="img/Fig%2015.png" /> <img src="img/Fig%2016.png" /></td>
+</tr>
+<tr class="odd">
+<td><strong>11.</strong> We will create our second interactive feature by allow user to select trading partner to display in our chart. We will drag <strong>Trading Partner into the Filters Pane</strong>. We will <strong>Select Create a New Parameter</strong> in the drop down list as shown. Next we will input the <strong>parameter name as ‘Select Trading Partner (1-85)’</strong>, set Data type as Integer, range of values as shown. Maximum is set to 85 as that is the maximum trading partner after filtering out trading partner with null value in Total Trade in step 3. We will <strong>select the filter by Top SUM(Total Trade)</strong> as shown. We will then select <strong>Show Parameter</strong>, we will <strong>select slider</strong> in the setting for the newly created parameter.</td>
+<td><img src="img/Fig%2017.png" /></td>
+</tr>
+<tr class="even">
+<td><strong>12.</strong> We will <strong>Add Reference Line</strong> to both X-Axis and Y-Axis as shown. The reference line is <strong>set at 50% mark</strong> for both axis to show the higher and lower range. The reference line is also <strong>formatted with line grey track line</strong> to complement the scatterplot chart.</td>
+<td><img src="img/Fig%2018.png" /></td>
+</tr>
+<tr class="odd">
+<td><strong>13.</strong> We will <strong>create 4 new Calculated Fields</strong> namely <strong>Net Exporter</strong>, <strong>Net Importer</strong>, <strong>Rank by Export Trade</strong> and <strong>Rank by Import Trade</strong> as shown. These fields will be used in the Tooltips to display the trade balance and the rankings of the trading partner in their imports and exports.</td>
+<td><img src="img/Fig%2019.png" /></td>
+</tr>
+<tr class="even">
+<td><strong>14.</strong> We will drag <strong>Export Trade</strong>, <strong>Import Trade</strong>, <strong>Net Exporter</strong>, <strong>Net Importer</strong>, <strong>Rank by Export Trade</strong>, <strong>Rank by Import Trade</strong> and <strong>Total Trade</strong> into the Tooltip setting in Marks Card. We will select the drop down icon beside Rank by Export Trade and Rank by Import Trade and select <strong>Compute Using Trade Partner</strong>. Next we will click on Tooltip icon in the Marks Card to <strong>edit the Tooptip</strong>. Firstly, we will <strong>insert the selected variables</strong> as shown into the Tooltip Text field. We will create the text and placed the inserted variables as arranged in the text as shown. We will format the <strong>Trading Partner in bold text and set 14 font size</strong> using Tableau Book Font Type. We will format the <strong>other inserted variables with a font size of 12 and bold the text</strong>. <strong>AGG(Net Exporter) will be coloured in Blue</strong> to show trade surplus and <strong>AGG(Net Importer) will be coloured in Red</strong> to show Trade Deficit. Lastly, AGG(Rank by Export Trade) will be coloured in Blue to show rank in export and AGG(Rank by Import Trade) will be coloured in Red to show rank in import. The rest of the text will be in default Tableau Book Font size 10</td>
+<td><img src="img/Fig%2020.png" /> <img src="img/Fig%2021.png" /></td>
+</tr>
+<tr class="odd">
+<td><strong>15.</strong> We want the display of the trade values to be in Million (M) so that the Tooltip will be better represented with the displayed values. We will format <strong>AGG(Net Exporter)</strong>, <strong>AGG(Net Importer)</strong>, <strong>SUM(Export Trade)</strong>, <strong>SUM(Import Trade)</strong> and <strong>SUM(Total Trade)</strong> to <strong>Currency (Custom) format with display units in Billions and in 2 Decimal Places</strong>. Example is shown for AGG(Net Exporter) and the same steps are repeated for the other 4 variables.</td>
+<td><img src="img/Fig%2022.png" /></td>
+</tr>
+<tr class="even">
+<td><strong>16.</strong> We notice that there are sum of Total Trade value that is $0.0M. On a closer inspection using View Data as shown, we notice that there are two duplicates entry which are Yemen Democratic and Germany, Democratic Republic that have zero Total Trade. We will <strong>drag Total Trade to Filters</strong> and select <strong>sum of Total Trade to be At least value = 1</strong>. This solve the issue of removing these two entry with zero Total Trade. Next, we examine the data once more using View Data and confirm that there are 83 trading partners and we will proceed to <strong>edit Parameters</strong> ‘Select Trading Partner (1-85)’ and <strong>rename it to ‘Select Trading Partner (1-83)’ and Maxium value from 85 to 83</strong>.</td>
+<td><img src="img/Fig%2023.png" /> <img src="img/Fig%2024.png" /> <img src="img/Fig%2025.png" /></td>
+</tr>
+<tr class="odd">
+<td><strong>17.</strong> We will <strong>format both the X and Y Axis</strong> by setting the font size, ticks line, and <strong>color the title font in Red for Y Axis</strong> which represent Import and <strong>color the title font in Blue for X Axis</strong> which represent Export. We will then Edit Y Axis and rename the Title to <strong>Net Importer</strong> with Subtitle to <strong>In Percentile</strong>. This is repeated for X Axis which title is renamed to <strong>Net Exporter</strong> as shown.</td>
+<td><img src="img/Fig%2026.png" /> <img src="img/Fig%2027.png" /> <img src="img/Fig%2028.png" /></td>
+</tr>
+<tr class="even">
+<td><strong>18.</strong> We will edit the Chart Title as shown, <strong>inserting Parameter Select Trading Partner (1-83)</strong> and MY(Month) to give the Title a interactive display upon user input.</td>
+<td><img src="img/Fig%2029.png" /></td>
+</tr>
+<tr class="odd">
+<td><strong>19.</strong> We will start a new worksheet to create Chart 2 which will supplement Chart 1. Firstly we will <strong>drag ‘Trade Balance’ to ‘Columns’ and ‘Trading Partner’ to ‘Rows’ shelves</strong>. Next we will <strong>drag Trade Balance into the Color setting of the Marks card</strong>. We will edit the colour of SUM(Trade Balance) to Red-Blue Diverging and set Use Full Color Range as shown.</td>
+<td><img src="img/Fig%2030.png" /></td>
+</tr>
+<tr class="even">
+<td><strong>20.</strong> We will go back to worksheet 1 Filters and <strong>select MY(Month) to Apply to Worksheets</strong>, which we will <strong>choose Selected Worksheets</strong> to link the same Filters for Chart 1 and Chart 2. This is repeated for Trading Partner Filter and SUM(Total Trade) Filter as shown.</td>
+<td><img src="img/Fig%2031.png" /></td>
+</tr>
+<tr class="odd">
+<td><strong>21.</strong> We will proceed to <strong>show the filters for MY(Month)</strong> and the setting will be similar to Step 10. We will also enable Show Parameter for Enter Trading Partner (1-83) created in Chart 1.</td>
+<td><img src="img/Fig%2032.png" /></td>
+</tr>
+<tr class="even">
+<td><strong>22.</strong> We will <strong>format both the Y and X Axis</strong>. Click on Trading Partner drop down icon and choose format. We will set a font size of 10 and bold the text, in addition, we format the Grid Lines as shown. We will repeat the same for SUM(Trade Balance) which is on the X axis as shown.</td>
+<td><img src="img/Fig%2033.png" /></td>
+</tr>
+<tr class="odd">
+<td><strong>23.</strong> We will drag Trade Balance into the Label setting of the Marks card. Next we will <strong>format the scale for X Axis to be in Currency (Custom) format with Display Units as Millions (M) and to 1 Decimal Place</strong>.</td>
+<td><img src="img/Fig%2034.png" /></td>
+</tr>
+<tr class="even">
+<td><strong>24.</strong> We will customer the Tooltip which is similar to Step 14 and 15 for Chart 1.</td>
+<td><img src="img/Fig%2036.png" /></td>
+</tr>
+<tr class="odd">
+<td><strong>25.</strong> We will create animation effect for both Chart 1 and Chart 2. Firstly, we will duplicate both Charts. Next, we will <strong>drag MY(Month) from Filters pane to the Pages pane</strong>. We need to <strong>edit the Chart Title</strong> as MY(Month) was used in the interactive chart and we will remove it from the Title. We will also <strong>edit the Page Title</strong> and change it to Month/Year. The same steps are repeated for Chart 2.</td>
+<td><img src="img/Fig%2037.png" /> <img src="img/Fig%2038.png" /></td>
+</tr>
+<tr class="even">
+<td><strong>26.</strong> Next we will integrate interactive Chart 1 and Chart 2 using Dashboard. Select <strong>Automatic size</strong> for the new Dashboard, <strong>Drag in Interactive chart 1 and Interactive chart 2</strong> into the Dashboard space as shown.</td>
+<td><img src="img/Fig%2038.png" /> <img src="img/Fig%2039.png" /> <img src="img/Fig%2040.png" /> <img src="img/Fig%2041.png" /></td>
+</tr>
+<tr class="odd">
+<td><strong>27.</strong> We will repeat step 26 to create a new Dashboard to integrate the motion Chart 1 and Chart 2.</td>
+<td><img src="img/Fig%2042.png" /> <img src="img/Fig%2043.png" /></td>
+</tr>
+<tr class="even">
+<td><strong>28.</strong> Lastly we will combine Dashboard 1 and Dashboard 2 created in step 26 and 27 by creating a new Story to <strong>display both the interactive mode and the animation mode as selection choice</strong> for the viewer. We will select Automatic as the size of the story board and we will proceed to drag the Dashboards into the story space as shown. We will create three captions, one for Animation mode,other for interactive mode and the last one for insights on this study.</td>
+<td><img src="img/Fig%2044.png" /> <img src="img/Fig%2045.png" /></td>
+</tr>
+<tr class="odd">
+<td><strong>29.</strong> We will give the Story board a title and the new visualisation is ready!</td>
+<td><img src="img/Fig%2046.png" /> <img src="img/Fig%2047.png" /> <img src="img/Fig%2048.png" /></td>
+</tr>
+</tbody>
+</table>
+<h1 id="derived-insights">5.0 Derived Insights</h1>
+<table>
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>S/N</th>
+<th>Major Observations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>(a) Singapore key Net Exporter is Hong Kong:</strong></td>
+<td>During this study period from Jan 2011 to Dec 2020, Singapore have consistent strong trade surplus record with Hong Kong, the other major trading partners with strong trade surplus are Indonesia, Malaysia, India, Thailand and China.</td>
+</tr>
+<tr class="even">
+<td><strong>(b) Singapore key Net Importer is United States:</strong></td>
+<td>Singapore have consistent trade deficit with United States. However from 2020, the trend seems to turn around and United States is a Net Exporter to Singapore in 2020. The other trading major partners who are trade Importers to Singapore are Taiwan, Japan and Korea.</td>
+</tr>
+<tr class="odd">
+<td><strong>(c) Trade Balance to Malaysia have become trade deficit since start of 2019:</strong></td>
+<td>Singapore have always been a net exporter to Malaysia during this study period, however the trend have change from Jan 2019 where the trade surplus become trade deficit and the trend continue till Dec 2020.</td>
+</tr>
+<tr class="even">
+<td><strong>(d) Singapore generally have strong trade surplus to Asia countries and Australia</strong></td>
+<td>With the exception of Taiwan, Japan and Korea, Singapore generally have higher trade surplus to Asia countries. In addition to the Major trading partners mentioned in (a), Vietnam and Australia also have positive trade balance with Singapore. In addition to Major Trading Partners mentioned in (b), other trading trading partners such as United Kingdom, United Arab Emirates, Saudi Arabia, Switzerland, Germany and France are on negative trade balance with Singapore. These countries are mainly Net Importer.</td>
+</tr>
+</tbody>
+</table>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
